@@ -1,0 +1,211 @@
+  que #1  
+ void main() {
+List names = [
+  "haziq",
+  "hamas",
+  "hamza",
+  "faraz"
+];
+  
+    print(names); 
+  }
+
+
+question # 2
+ void main() {
+List days =[];
+    days.add("monday");
+    days.add("tuesday");
+    days.add("wednesday");
+    days.add("thursday");
+    days.add("friday");
+    days.add("saturday");
+    days.add("sunday");
+ print(days);
+  }
+ qestion # 4 ;
+
+List numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  List evenOddList = [];
+
+  for (int i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 == 0) {
+      evenOddList.add(true);
+    } else {
+      evenOddList.add(false);
+    }
+  }
+
+  print("Original List: $numbers");
+  print("Even/Odd List: $evenOddList"); 
+}
+
+
+question # 3;
+void main() {
+  List<String> days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+  while (days.isNotEmpty) {
+    print('Remaining Days: $days');
+    String removedDay = days.removeLast();
+    print('Removed Day: $removedDay');
+    print('-------------------');
+  }
+}
+
+
+question #5;
+void main() {
+  List<int> numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  int evenCount = 0;
+  int oddCount = 0;
+
+  while (numbers.isNotEmpty) {
+    int number = numbers.removeLast();
+    if (number % 2 == 0) {
+      evenCount++;
+    } else {
+      oddCount++;
+    }
+  }
+
+  print('Number of even numbers: $evenCount');
+  print('Number of odd numbers: $oddCount');
+} 
+
+
+question # 6 ;
+
+void main() {
+  List<int> numbers = [1, 2, 3, 4, 5];
+  int sum = 0;
+  int product = 1;
+
+  // Summing all the items in the list
+  for (int number in numbers) {
+    sum += number;
+  }
+
+  // Multiplying each item with its index number
+  for (int i = 0; i < numbers.length; i++) {
+    product *= numbers[i] * i;
+  }
+
+  print('Sum of all items: $sum');
+  print('Product of each item with its index: $product');
+}
+
+
+
+question # 7 ;
+
+void main() {
+  List<int> numbers = [5, 2, 9, 1, 7, 3, 6];
+  
+  int smallest = numbers[0];
+  int greatest = numbers[0];
+
+  for (int i = 1; i < numbers.length; i++) {
+    if (numbers[i] < smallest) {
+      smallest = numbers[i];
+    }
+
+    if (numbers[i] > greatest) {
+      greatest = numbers[i];
+    }
+  }
+
+  print('List of numbers: $numbers');
+  print('Smallest number: $smallest');
+  print('Greatest number: $greatest');
+}
+
+question # 8 ;
+void main() {
+  Map<String, String> contacts = {
+    'haziq': '1234567890',
+    'Ali': '9876543210',
+    'Babar': '5678901234',
+    'imran': '0123456789',
+  };
+
+  Iterable<String> keysWithLengthFour = contacts.keys.where((key) => key.length == 4);
+
+  print('Contacts: $contacts');
+  print('Keys with length 4: $keysWithLengthFour');
+}
+ 
+
+question # 9 ;
+
+void main() {
+  Map<String, Map<String, dynamic>> world = {
+    'USA': {
+      'capitalCity': 'Washington, D.C.',
+      'currency': 'US Dollar',
+      'language': 'English',
+    },
+    'Japan': {
+      'capitalCity': 'Tokyo',
+      'currency': 'Japanese Yen',
+      'language': 'Japanese',
+    },
+    'Germany': {
+      'capitalCity': 'Berlin',
+      'currency': 'Euro',
+      'language': 'German',
+    },
+  };
+
+  String countryKey = 'Germany'; // Replace with the desired country key
+
+  if (world.containsKey(countryKey)) {
+    Map<String, dynamic> countryInfo = world[countryKey];
+    String capitalCity = countryInfo['capitalCity'];
+    String currency = countryInfo['currency'];
+
+    print('Country: $countryKey');
+    print('Capital: $capitalCity');
+    print('Currency: $currency');
+  } else {
+    print('Country not found.');
+  }
+}
+ 
+
+
+question # 10 ;
+
+void main() {
+  Map<String, double> expenses = {
+    'sun': 3000.0,
+    'mon': 3000.0,
+    'tue': 3234.0,
+  };
+
+  String key = 'fri';
+  double value = 5000.0;
+
+  if (expenses.containsKey(key)) {
+    expenses[key] = value;
+  } else {
+    expenses.putIfAbsent(key, () => value);
+  }
+
+  print('Expenses: $expenses');
+}
+
+
+question # 11 ;
+
+void main() {
+  List<bool> values = [true, false, true, false, true, false];
+
+  // Using removeWhere
+  values.removeWhere((value) => value == false);
+
+  // Using retainWhere
+  // values.retainWhere((value) => value == true);
+
+  print('List after removing false values: $values');
+} 
